@@ -1,0 +1,1 @@
+at first we loop through the given years, then we check if the year is a leap year,we select the months array accordingly, since 1st of janauary is monday so I set the day to 2, ten we loop through each array of months, check the remainder, if exactly divisible than the month has sunday as first day else we add the remainder with the day and proceed forward.
