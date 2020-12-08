@@ -11,21 +11,25 @@ def is_leap_year(year):
     return False
 
 
+# working code to determine the number of sundays in the 20th century
 count = 0
 for year in range(1901, 2001):
   if year==1901:
-    day = 2 #  2 stands for Monday
+    day = 3
   if is_leap_year(year):
     months = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
   else:
     months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
   for i in range(12):
-    if (day + months[i])%7 == 0
+    rem = (day + months[i])%7
+    if rem == 1:
       count += 1
+      day = 1
     else:
-      rem = months[i]%7
-      day += rem
-      if day ==1:
-        count += 1
+      day = rem
+  # print ( i + 1, months[i], day, count)
 
 print(count)
+
+  
